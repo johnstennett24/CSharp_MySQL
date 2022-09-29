@@ -18,3 +18,13 @@ developer, C# is very similar and you can pick it up very easily.
 # Useful Websites
 
 * [C# and MySQL guide](https://dev.mysql.com/doc/connector-net/en/)
+
+# Run the Program
+
+  * To run the progam you will need to have C# and .NET installed on your local machine.
+  
+  ## Instructions
+    1. Install C# and .NET 6.0
+    2. Clone this repository
+    3. open a new terminal and type 'dotnet build'
+    4. Once you recieve a 'build succesecul' notification, type 'dotnet run'
