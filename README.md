@@ -18,6 +18,7 @@ developer, C# is very similar and you can pick it up very easily.
 # Useful Websites
 
 * [C# and MySQL guide](https://dev.mysql.com/doc/connector-net/en/)
+* [C# and .NET docs](https://learn.microsoft.com/en-us/dotnet/csharp/)
 
 # Run the Program
 
