@@ -16,6 +16,7 @@ public class DatabaseServices
     
     _connection = new MySqlConnection(connectionString);
   }
+  
   /// <summary>
   /// ShowActorsFirstName is used to display the actors first names in the database.
   /// </summary>
@@ -23,14 +24,17 @@ public class DatabaseServices
   {
     MySqlCommand command = new MySqlCommand();
     command.CommandText = "select distinct first_name from actor order by first_name";
+    command.Connection = _connection;
+
     var reader = command.ExecuteReader();
     while (reader.Read())
     {
-      string columnName = (string)reader["first_name"];
-      Console.WriteLine(columnName);
+      string firstName = (string)reader["first_name"];
+      Console.WriteLine(firstName);
     }
     reader.Close();
   }
+  
   /// <summary>
   /// ShowActorsLastName is similar to ShowActorsFirstName except it shows the last name instead of the first name.
   /// </summary>
@@ -38,16 +42,20 @@ public class DatabaseServices
   public void ShowActorsLastName()
   {
     MySqlCommand command = new MySqlCommand();
+    
     command.CommandText = "select distinct last_name from actor order by last_name";
+    command.Connection = _connection;
+    
     var reader = command.ExecuteReader();
     
     while (reader.Read())
     {
-      string columnName = (string)reader["last_name"];
-      Console.WriteLine(columnName);
+      string lastName = (string)reader["last_name"];
+      Console.WriteLine(lastName);
     }
     reader.Close();
   }
+  
   /// <summary>
   /// ShowActorFullName shows the first and last name of each actor in the table.
   /// </summary>
@@ -57,6 +65,8 @@ public class DatabaseServices
     MySqlCommand command = new MySqlCommand();
     
     command.CommandText = "select distinct first_name, last_name from actor";
+    command.Connection = _connection;
+    
     var reader = command.ExecuteReader();
     
     while (reader.Read())
@@ -67,6 +77,7 @@ public class DatabaseServices
     }
     reader.Close();
   }
+  
   /// <summary>
   /// GetAName takes input from the user and then searches for the first name that the
   /// user inputted in the table and displays all the different actors with that first name.

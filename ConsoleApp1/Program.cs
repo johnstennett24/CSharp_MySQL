@@ -17,21 +17,23 @@ public static class Program
     {
       Display();
       var choice = Console.ReadLine();
-      if (choice == "1")
+      switch (choice)
       {
-        db.ShowActorsFirstName();
-      } else if (choice == "2")
-      {
-        db.ShowActorsLastName();
-      } else if (choice == "3")
-      {
-        db.ShowActorFullname();
-      } else if (choice == "4")
-      {
-        db.GetAName();
-      } else
-      {
-        isRunning = false;
+        case "1":
+          db.ShowActorsFirstName();
+          break;
+        case "2":
+          db.ShowActorsLastName();
+          break;
+        case "3":
+          db.ShowActorFullname();
+          break;
+        case "4":
+          db.GetAName();
+          break;
+        default:
+          isRunning = false;
+          break;
       }
     }
 
