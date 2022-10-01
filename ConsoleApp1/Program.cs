@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace ConsoleApp1;
+
 /// <summary>
 /// This file contains the main function for the program
 /// </summary>
