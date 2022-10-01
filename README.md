@@ -6,7 +6,7 @@ This C# progam is written to access a database and return the results in methods
 My purpose for creating this software is to help me learn how to make SQL queries and transactions in C# so that I can connect it to a WebAPI in C# later on
 {Provide a link to your YouTube demonstration.  It should be a one minute demo of the software running and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/o1BYcJ4nqwA)
 
 # Development Environment
 
